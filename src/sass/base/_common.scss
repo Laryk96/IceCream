@@ -1,0 +1,190 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Seymour One', sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: bgd(main-green);
+  color: text(main-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 60px 0;
+
+  //   &--bgd-image {
+  //     background-size: 100%;
+  //     background-repeat: no-repeat;
+  //     @media screen and (max-width: 767px) {
+  //       max-width: 767px;
+  //       background-image: image-set(
+  //           url(../image/product/mobail/bgd-1@1x-320.jpg) 1x,
+  //           url(../image/product/mobail/bgd-1@2x-640.jpg) 2x
+  //         ),
+  //         image-set(
+  //           url(../image/product/mobail/bgd-2@1x-320.jpg) 1x,
+  //           url(../image/product/mobail/bgd-2@2x-640.jpg) 2x
+  //         ),
+  //         image-set(
+  //           url(../image/product/mobail/bgd-3@1x-320.jpg) 1x,
+  //           url(../image/product/mobail/bgd-3@2x-640.jpg) 2x
+  //         );
+
+  //       background-position: top, center, bottom;
+  //     }
+  //     @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //       background-image: image-set(
+  //         url(../image/product/tablet/bgd-tab@1x.jpg) 1x,
+  //         url(../image/product/tablet/bgd-tab@2x.jpg) 2x
+  //       );
+  //     }
+  //     @media screen and (min-width: 1200px) and (max-width: 1919px) {
+  //       background-image: image-set(
+  //         url(../image/product/desktop/bgd-desk@1x.jpg) 1x,
+  //         url(../image/product/desktop/bgd-desk@2x.jpg) 2x,
+  //         url(../image/product/desktop/bgd-desk@3x.jpg) 3x
+  //       );
+  //     }
+  //     @media screen and (min-width: 1920px) {
+  //       background-image: image-set(
+  //         url(../image/product/desktop/bgd-ultra@1x.jpg) 1x,
+  //         url(../image/product/desktop/bgd-ultra@2x.jpg) 2x,
+  //         url(../image/product/desktop/bgd-ultra@3x.jpg) 3x
+  //       );
+  //     }
+  //   }
+
+  //   &--bgd-image-second {
+  //     position: relative;
+
+  //     @media screen and (max-width: 767px) {
+  //       padding-bottom: 393px;
+  //       padding-top: 80px;
+  //       background-image: image-set(
+  //         url(../image/custmer-review/bgd@1x.jpg) 1x,
+  //         url(../image/custmer-review/bgd@2x.jpg) 2x
+  //       );
+
+  //       background-position: top;
+  //       background-repeat: no-repeat;
+  //       background-size: 100%;
+  //     }
+  //     @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //       padding-top: 223px;
+  //       padding-bottom: 401px;
+  //       background-image: image-set(
+  //         url(../image/custmer-review/tablet/bgd-costmer@1x.jpg) 1x,
+  //         url(../image/custmer-review/tablet/bgd-costmer@2x.jpg) 2x
+  //       );
+  //       background-position: top;
+  //       background-repeat: no-repeat;
+  //       background-size: 100%;
+  //     }
+  //     @media screen and (min-width: 1200px) {
+  //       padding-top: 452px;
+  //       padding-bottom: 251px;
+  //       background-image: image-set(
+  //         url(../image/custmer-review/desktop/bgd-desktop@1x.jpg) 1x,
+  //         url(../image/custmer-review/desktop/bgd-desktop@2x.jpg) 2x,
+  //         url(../image/custmer-review/desktop/bgd-desktop@3x.jpg) 3x
+  //       );
+  //       background-position: top;
+  //       background-repeat: no-repeat;
+  //       background-size: 100%;
+  //     }
+  //   }
+
+  //   &--little-padding-botom {
+  //     @media screen and (max-width: 767px) {
+  //       padding-bottom: 42px;
+  //     }
+  //     @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //       padding-bottom: 65px;
+  //     }
+  //     @media screen and (min-width: 1200px) {
+  //       padding-bottom: 152px;
+  //     }
+  //   }
+
+  //   &--no-padding-top {
+  //     padding-top: 0;
+
+  //     @media screen and (min-width: 768px) {
+  //       padding-bottom: 204px;
+  //     }
+  //   }
+
+  //   &--other-padding {
+  //     @media screen and (max-width: 767px) {
+  //       padding-bottom: 39px;
+  //     }
+  //     @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //       height: 372px;
+  //     }
+  //     @media screen and (min-width: 1200px) {
+  //       height: 627px;
+  //     }
+  //   }
+}
+
+.section-margin-bottom {
+  margin-bottom: 106px;
+}
+
+.section-gallery {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  @media screen and (max-width: 767px) {
+    height: 100px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mobail-use;
+  @include tablet-use;
+  @include desktop-use;
+}
+
+.container--other-width {
+  width: 100%;
+  padding: 0;
+}

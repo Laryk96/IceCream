@@ -1,0 +1,15 @@
+%btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 34px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  background-color: bgd(btn-yellow);
+  color: text(second-black);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

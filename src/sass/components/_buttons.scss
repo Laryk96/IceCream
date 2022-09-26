@@ -1,0 +1,112 @@
+.btn {
+  @extend %btn;
+
+  &--center {
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  &--no-bgd {
+    @extend %btn;
+    background-color: transparent;
+    border: 2px solid bgd(btn-yellow);
+
+    transition: color $animation, border-color $animation;
+
+    &:hover {
+      border-color: bgd(hover-btn-green);
+    }
+
+    &:focus {
+      border-color: bgd(hover-btn-green);
+      outline: bgd(hover-btn-green);
+      color: text(main-white);
+    }
+
+    @media screen and (max-width: 1199px) {
+      width: 62px;
+      height: 24px;
+      padding: 5px 10px;
+
+      font-weight: 600;
+      font-size: 8px;
+      line-height: 1.25;
+    }
+  }
+  transition: color $animation, background-color $animation,
+    box-shadow $animation, transform $animation;
+
+  &:hover,
+  &:focus {
+    background-color: bgd(hover-btn-green);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+  }
+  &:focus {
+    color: text(main-white);
+  }
+}
+
+//  &--big {
+//     min-width: 196px;
+//   }
+.btn-transparent {
+  text-align: center;
+  width: 83px;
+  padding: 5px 10px;
+
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  text-decoration-line: underline;
+  color: text(btn-yellow);
+
+  &:hover {
+    color: text(hover-btn-transparent);
+  }
+  &:focus {
+    color: text(main-white);
+  }
+}
+
+.btn__icon {
+  fill: currentColor;
+  margin-left: 8px;
+}
+
+.product__btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 1200px) {
+    bottom: 60px;
+  }
+}
+
+.menu-container__btn {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__btn {
+  .btn-menu.is-open + & {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    order: 1;
+  }
+}
