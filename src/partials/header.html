@@ -1,0 +1,87 @@
+<header class="header" id="header">
+  <div class="container header__container">
+    <a class="logo" href="#" data-logo>
+      <picture>
+        <source
+          srcset="./images/logo/logo@1x.png 1x, ./images/logo/logo@2x.png 2x"
+          media="(min-width:320px)"
+        />
+        <img
+          class="logo__img"
+          src="./images/logo/logo@1x.png"
+          alt="logo ice-cream"
+          width="81"
+        />
+      </picture>
+    </a>
+
+    <button
+      type="button"
+      class="btn-menu"
+      aria-controls="header__menu-container"
+      aria-expanded="false"
+      data-menu-button
+    >
+      <svg
+        width="32"
+        height="32"
+        class="header__icon-set"
+        aria-label="Переключатель мобильного меню"
+      >
+        <use
+          class="header__icon-menu"
+          href="./images/icons.svg#icon-menu"
+        ></use>
+        <use
+          class="header__icon-close"
+          href="./images/icons.svg#icon-close"
+        ></use>
+      </svg>
+    </button>
+
+    <button type="button" class="btn header__btn" data-modal-open-hero>
+      Buy now
+      <svg width="12" height="12" class="header__btn-icon">
+        <use href="./images/icons.svg#icon-btn-arrow"></use>
+      </svg>
+    </button>
+
+    <div class="header__menu-container" id="header__menu-container" data-menu>
+      <nav class="header__nav">
+        <ul class="site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#header" menu-btn-nav-data1>Home</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#about" menu-btn-nav-data2
+              >How it’s made?</a
+            >
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#products" menu-btn-nav-data3
+              >Our products</a
+            >
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#contacts" menu-btn-nav-data4
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        type="button"
+        class="btn header__btn header__btn--mutable"
+        aria-controls="header__menu-container"
+        aria-expanded="false"
+        data-modal-open-hero-mob
+      >
+        Buy now
+        <svg width="12" height="12" class="header__btn-icon">
+          <use href="./images/icons.svg#icon-btn-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
