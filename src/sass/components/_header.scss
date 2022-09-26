@@ -160,7 +160,10 @@
 
 .site-nav__link {
   font-weight: 700;
+  display: block;
   color: text(main-white);
+
+  transition: color $animation, transform $animation, box-shadow $animation;
 
   @media screen and (max-width: 767px) {
     font-size: 32px;
@@ -172,8 +175,6 @@
     line-height: 1.22;
   }
 
-  transition: color $animation, transform $animation, box-shadow $animation;
-
   @media screen and (max-width: 1199px) {
     &:hover,
     &:focus {
@@ -183,8 +184,8 @@
   @media screen and (min-width: 1200px) {
     &:hover,
     &:focus {
+      transform: scale(1.15);
       color: text(btn-yellow);
-      transform: scale(1.1);
       box-shadow: 0 20px 16px -16px rgba(0, 0, 0, 0.6);
     }
   }
