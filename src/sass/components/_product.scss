@@ -1,0 +1,390 @@
+.products {
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    max-width: 767px;
+    padding: 60px 0;
+    background-image: url(../images/product/mobail/bgd-1@1x-320.jpg),
+      url(../images/product/mobail/bgd-2@1x-320.jpg),
+      url(../images/product/mobail/bgd-3@1x-320.jpg);
+    @include retina {
+      background-image: url(../images/product/mobail/bgd-1@2x-640.jpg),
+        url(../images/product/mobail/bgd-2@2x-640.jpg),
+        url(../images/product/mobail/bgd-3@2x-640.jpg);
+    }
+
+    background-position: top, center, bottom;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 61px;
+    padding-bottom: 82px;
+    background-image: url(../images/product/tablet/bgd-tab@1x.jpg);
+
+    @include retina {
+      background-image: url(../images/product/tablet/bgd-tab@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1919px) {
+    padding-top: 60px;
+    padding-bottom: 66px;
+    background-image: url(../images/product/desktop/bgd-desk@1x.jpg);
+
+    @include retina {
+      background-image: url(../images/product/desktop/bgd-desk@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 60px;
+    padding-bottom: 66px;
+
+    background-image: url(../images/product/desktop/bgd-ultra@1x.jpg);
+
+    @include retina {
+      background-image: url(../images/product/desktop/bgd-ultra@2x.jpg);
+    }
+  }
+}
+
+.products__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 32px;
+  }
+}
+
+.products__item {
+  position: relative;
+
+  border-radius: 24px;
+  box-shadow: 0px 5px 20px rgba(212, 20, 67, 0.1);
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding-top: 123px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 420px;
+
+    &:not(:last-child) {
+      margin-bottom: 164px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 16px * 2) / 3);
+    min-height: 428px;
+    padding-top: 108px;
+    padding-left: 26px;
+    padding-right: 26px;
+
+    border-radius: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 32px * 2) / 3);
+    min-height: 535px;
+    padding-top: 165px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  transition: transform $animation;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.products__item--color-green {
+  background-color: bgd(product-green);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 199px;
+    height: 197px;
+    top: 0;
+    left: 50%;
+
+    z-index: 1;
+    border-radius: 50%;
+
+    background-position: center;
+
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 199px;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/product/mobail/cream@1x.jpg);
+
+      @include retina {
+        background-image: url(../images/product/mobail/cream@2x.jpg);
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 200px;
+      height: 197px;
+      transform: translate(-50%, -60%);
+      background-image: url(../images/product/tablet/ice-cream@1x.jpg);
+
+      @include retina {
+        background-image: url(../images/product/tablet/ice-cream@2x.jpg);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 300px;
+      transform: translate(-50%, -61%);
+      background-image: url(../images/product/desktop/ice-cream@1x.jpg);
+      @include retina {
+        background-image: url(../images/product/desktop/ice-cream@1x.jpg);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    border-radius: 50%;
+    @media screen and (max-width: 767px) {
+      width: 199px;
+      height: 210px;
+      transform: translate(-50%, -47%);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 203px;
+      height: 212px;
+      transform: translate(-50%, -57%);
+    }
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 300px;
+      transform: translate(-50%, -56%);
+    }
+  }
+}
+
+.products__item--color-yellow {
+  background-color: bgd(product-yellow);
+  &::before {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 199px;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/product/mobail/coffee@1x.jpg);
+
+      @include retina {
+        background-image: url(../images/product/mobail/coffee@2x.jpg);
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 199px;
+      height: 197px;
+      transform: translate(-50%, -60%);
+      background-image: url(../images/product/tablet/ice-coffee@1x.jpg);
+
+      @include retina {
+        background-image: url(../images/product/tablet/ice-coffee@2x.jpg);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 300px;
+      transform: translate(-50%, -61%);
+
+      background-image: url(../images/product/desktop/ice-coffee@1x.jpg);
+
+      @include retina {
+        background-image: url(../images/product/desktop/ice-coffee@2x.jpg);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+    border-radius: 50%;
+    @media screen and (max-width: 767px) {
+      width: 199px;
+      height: 210px;
+      transform: translate(-50%, -47%);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 203px;
+      height: 212px;
+      transform: translate(-50%, -57%);
+    }
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 300px;
+      transform: translate(-50%, -56%);
+    }
+  }
+}
+
+.products__item--color-brown {
+  background-color: bgd(product-brown);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 199px;
+    height: 197px;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 199px;
+      transform: translate(-50%, -50%);
+
+      background-image: url(../images/product/mobail/milkshakes@1x.jpg);
+      @include retina {
+        background-image: url(../images/product/mobail/milkshakes@2x.jpg);
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 200px;
+      height: 197px;
+      transform: translate(-50%, -60%);
+      background-image: url(../images/product/tablet/milkshakes@1x.jpg);
+      @include retina {
+        background-image: url(../images/product/tablet/milkshakes@2x.jpg);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 300px;
+      transform: translate(-50%, -61%);
+      background-image: url(../images/product/desktop/milkshakes@1x.jpg);
+      @include retina {
+        background-image: url(../images/product/desktop/milkshakes@2x.jpg);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    @media screen and (max-width: 767px) {
+      width: 199px;
+      height: 210px;
+      transform: translate(-50%, -47%);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 203px;
+      height: 212px;
+      transform: translate(-50%, -57%);
+    }
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 300px;
+      transform: translate(-50%, -56%);
+    }
+  }
+}
+
+.products__img {
+}
+
+.products__desc {
+  text-align: center;
+}
+
+.products__title {
+  margin-bottom: 40px;
+  width: 100%;
+
+  font-family: 'Montserrat';
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: text(second-black);
+
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+    line-height: 1.09;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 22px;
+    line-height: 1.227;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 65px;
+
+    font-size: 30px;
+    line-height: 1.233;
+  }
+}
+
+.products__text {
+  letter-spacing: 0.04em;
+  color: text(second-black);
+
+  @media screen and (max-width: 1199px) {
+    font-size: 14px;
+    line-height: 1.78;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+.products__link {
+  display: inline-block;
+}
+.products__icon {
+  height: 13px;
+}

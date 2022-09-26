@@ -77,16 +77,26 @@
   margin-left: 8px;
 }
 
-.product__btn {
+.products__btn {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   border: none;
   background-color: transparent;
-
+  cursor: pointer;
   @media screen and (min-width: 1200px) {
     bottom: 60px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-158px, -455px);
+    width: 370px;
+    height: 535px;
   }
 }
 
