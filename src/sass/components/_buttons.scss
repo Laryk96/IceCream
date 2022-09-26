@@ -8,33 +8,7 @@
       display: block;
     }
   }
-  &--no-bgd {
-    @extend %btn;
-    background-color: transparent;
-    border: 2px solid bgd(btn-yellow);
 
-    transition: color $animation, border-color $animation;
-
-    &:hover {
-      border-color: bgd(hover-btn-green);
-    }
-
-    &:focus {
-      border-color: bgd(hover-btn-green);
-      outline: bgd(hover-btn-green);
-      color: text(main-white);
-    }
-
-    @media screen and (max-width: 1199px) {
-      width: 62px;
-      height: 24px;
-      padding: 5px 10px;
-
-      font-weight: 600;
-      font-size: 8px;
-      line-height: 1.25;
-    }
-  }
   transition: color $animation, background-color $animation,
     box-shadow $animation, transform $animation;
 
@@ -49,9 +23,60 @@
   }
 }
 
-//  &--big {
-//     min-width: 196px;
-//   }
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid bgd(btn-yellow);
+  border-radius: 10px;
+  color: text(second-black);
+
+  @media screen and (max-width: 1199px) {
+    font-size: 8px;
+    line-height: 1.25;
+    border-radius: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 42px;
+    min-width: 142px;
+    font-size: 14px;
+    line-height: 1.285;
+  }
+
+  transition: color $animation, border-color $animation, outline $animation,
+    transform $animation;
+
+  &:hover,
+  &:focus {
+    border-color: bgd(hover-btn-green);
+    outline: bgd(hover-btn-green);
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    color: text(main-white);
+  }
+
+  &--big {
+    min-width: 196px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 62px;
+    height: 24px;
+    padding: 5px 10px;
+
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 1.25;
+  }
+}
+
 .btn-transparent {
   text-align: center;
   width: 83px;
@@ -64,11 +89,23 @@
   text-decoration-line: underline;
   color: text(btn-yellow);
 
+  transition: transform $animation, color $animation;
+
   &:hover {
     color: text(hover-btn-transparent);
+    transform: scale(1.1);
   }
+
   &:focus {
     color: text(main-white);
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 154px;
+    padding: 10px 10px;
   }
 }
 
