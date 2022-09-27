@@ -1,3 +1,3 @@
-import './js/mobail-menu';
-import './js/modal-window';
-import './js/script';
+import './partials/js/menu';
+import './partials/js/modal-window';
+import './partials/js/script';

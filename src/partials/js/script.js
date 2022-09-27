@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".slider-gallery").slick({
+  $('.slider-gallery').slick({
     arrows: false,
     autoplay: true,
     autoplayspeed: 9000,
@@ -12,7 +12,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $(".slider-review").slick({
+  $('.slider-review').slick({
     arrows: false,
     dots: true,
   });
