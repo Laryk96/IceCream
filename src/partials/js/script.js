@@ -12,7 +12,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $('.slider-review').slick({
+  $('.custmer-review__list').slick({
     arrows: false,
     dots: true,
   });
