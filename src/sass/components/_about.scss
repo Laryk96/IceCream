@@ -1,0 +1,211 @@
+.about {
+  padding-top: 60px;
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 42px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 65px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 152px;
+  }
+}
+
+.about__box {
+  position: relative;
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 104px;
+    width: 463px;
+  }
+}
+.about__overflow {
+  position: relative;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 24px;
+    transform: translateX(-32px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    width: 100%;
+    left: -106%;
+    top: 0;
+    transform: translate(-100px, -60px);
+  }
+  &::before {
+    @media screen and (max-width: 767px) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 273px;
+      height: 278px;
+      transform: translate(-50%, -20px);
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+      border-radius: 50%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -0;
+      width: 334px;
+      height: 330px;
+
+      transform: translate(0, -20px);
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+      border-radius: 50%;
+    }
+    @media screen and (min-width: 1200px) {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -0;
+      width: 490px;
+      height: 490px;
+
+      transform: translate(0, -49px);
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+      border-radius: 50%;
+    }
+  }
+}
+
+.image__wrapper {
+  overflow: hidden;
+  border-radius: 50%;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    width: 278px;
+    height: 278px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 334px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 490px;
+  }
+}
+.about__image {
+  position: relative;
+}
+
+.about__list {
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 336px;
+    margin-left: auto;
+    margin-bottom: 49px;
+    min-height: 253px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 463px;
+    margin-bottom: 48px;
+  }
+}
+
+.about__item {
+  font-size: 12px;
+  line-height: 1.58;
+
+  &:first-child {
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+
+  &:nth-child(3) {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 327px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+
+    &:first-child {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    &:nth-child(2) {
+      font-size: 14px;
+      line-height: 1.928;
+    }
+
+    &:nth-child(3) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.about__desc {
+  letter-spacing: 0.04em;
+  font-size: inherit;
+  @media screen and (max-width: 767px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.583;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
+}
