@@ -35,9 +35,6 @@
   border-radius: 10px;
   color: text(second-black);
 
-  @media screen and (min-width: 1200px) {
-  }
-
   @media screen and (max-width: 1199px) {
     font-size: 8px;
     line-height: 1.25;
@@ -67,15 +64,6 @@
 
   &--big {
     min-width: 196px;
-  }
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-  }
-
-  @media screen and (min-width: 1200px) {
   }
 
   @media screen and (max-width: 1199px) {
