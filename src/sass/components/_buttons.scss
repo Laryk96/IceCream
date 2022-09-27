@@ -55,15 +55,11 @@
   &:focus {
     border-color: bgd(hover-btn-green);
     outline: bgd(hover-btn-green);
-    transform: scale(1.1);
+    transform: scale(1.1) translateX(-10px);
   }
 
   &:focus {
     color: text(main-white);
-  }
-
-  &--big {
-    min-width: 196px;
   }
 
   @media screen and (max-width: 1199px) {
@@ -107,6 +103,15 @@
     min-width: 154px;
     padding: 10px 10px;
   }
+}
+
+.contact__btn {
+  min-width: 196px;
+  min-height: 42px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.285;
 }
 
 .btn__icon {
