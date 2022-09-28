@@ -1,43 +1,26 @@
 .contact {
   @media screen and (max-width: 767px) {
-    height: 1102px;
     padding-bottom: 39px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    height: 385px;
     padding-bottom: 40px;
   }
   @media screen and (min-width: 1200px) {
-    height: 688px;
     padding-bottom: 120px;
   }
 }
+
 .contact__container {
-  position: relative;
 }
 
-.contact__wrapper {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-
+.contact__list {
   @media screen and (max-width: 767px) {
-    // transform: translateY(-399px);
-    transform: translateY(-345px);
+    position: relative;
+    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     transform: translateY(-285px);
-  }
-
-  @media screen and (min-width: 1200px) {
-    transform: translateY(-94px);
-  }
-}
-.contact__list {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 768px) {
@@ -49,16 +32,31 @@
   @media screen and (min-width: 1200px) {
     gap: 32px;
     margin-bottom: 64px;
+    transform: translateY(-94px);
   }
 }
 
 .contact__item {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (max-width: 767px) {
     padding: 40px 32px;
     background-color: bgd(card-white);
+
+    &:first-child {
+      position: absolute;
+      top: -451px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+    }
+    &:nth-child(2) {
+      margin-top: 87px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -285,6 +283,14 @@
     display: flex;
     justify-content: center;
     gap: 16px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: -278px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: -94px;
   }
 }
 .contact__btn-item {
