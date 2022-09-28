@@ -117,6 +117,7 @@
     border-radius: 50%;
 
     background-position: center;
+    background-size: contain;
 
     @media screen and (max-width: 767px) {
       width: 200px;
@@ -191,6 +192,9 @@
     z-index: 1;
     border-radius: 50%;
     overflow: hidden;
+
+    background-position: center;
+    background-size: contain;
 
     @media screen and (max-width: 767px) {
       width: 200px;
@@ -271,6 +275,8 @@
     border-radius: 50%;
     overflow: hidden;
 
+    background-position: center;
+    background-size: contain;
     @media screen and (max-width: 767px) {
       width: 200px;
       height: 199px;
