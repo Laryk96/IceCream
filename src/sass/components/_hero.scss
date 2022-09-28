@@ -6,7 +6,6 @@
   @media screen and (max-width: 767px) {
     padding-top: 110px;
     padding-bottom: 239px;
-
     background-image: url(../images/hero/mobail/ice-cream-276.png),
       url(../images/hero/mobail/bgd-hero-320.png);
     @include retina {
@@ -16,7 +15,7 @@
 
     background-repeat: no-repeat;
     background-position: center bottom -74px, bottom;
-    background-size: 258px 374px, 100vw 50px;
+    background-size: 334px, 100vw 50px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 768px;
@@ -65,7 +64,7 @@
 
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
-    width: 297px;
+    width: 258px;
     height: 97px;
 
     font-size: 26px;

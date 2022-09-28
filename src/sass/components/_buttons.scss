@@ -136,9 +136,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-158px, -455px);
-    width: 370px;
-    height: 535px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 200px;
+      height: 420px;
+      transform: translate(-74px, -380px);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 223px;
+      height: 428px;
+      transform: translate(-85px, -388px);
+    }
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+      height: 535px;
+      transform: translate(-158px, -455px);
+    }
   }
 }
 
