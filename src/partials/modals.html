@@ -1,12 +1,12 @@
 <div class="backdrop is-hidden" id="buy-now" data-backdrop-hero>
-  <div class="modal">
-    <button class="modal__btn-close" data-modal-close-hero>
+  <div class="modals">
+    <button class="modals__btn-close" data-modal-close-hero>
       <svg class="modal__icon" width="18" height="18">
         <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
-    <article class="modal__products">
-      <h2 class="modal__title">Buy now</h2>
+    <article class="modal-cart">
+      <h2 class="modal-cart__title">Buy now</h2>
       <form class="form">
         <ul class="form__checkbox-set">
           <li class="form__item">
@@ -68,7 +68,136 @@
   </div>
 </div>
 
-<div class="backdrop is-hidden" data-backdrop-product></div>
+<div class="backdrop is-hidden" data-backdrop-product>
+  <div class="modals">
+    <button
+      class="modals__btn-close modals__btn-close--more-indent"
+      data-modal-close-product
+    >
+      <svg class="modal__icon" width="18" height="18">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <article class="modal-products">
+      <h2 class="modal-products__title">Chololate icecream</h2>
+      <ul class="modal-products__list">
+        <li class="modal-products__wrapper">
+          <ul>
+            <li><span class="modal-products__quantity">320</span></li>
+            <li><p class="modal-products__text">kcal</p></li>
+          </ul>
+        </li>
+        <li class="modal-products__wrapper">
+          <ul>
+            <li><span class="modal-products__quantity">4g</span></li>
+            <li>
+              <p class="modal-products__text">
+                <span class="modal-products__text--shift">Prote...</span>
+                <span
+                  class="modal-products__text modal-products__text--shift-to"
+                >
+                  Protein...</span
+                >
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="modal-products__wrapper">
+          <ul>
+            <li><span class="modal-products__quantity">8,2g</span></li>
+            <li><p class="modal-products__text">Fats</p></li>
+          </ul>
+        </li>
+        <li class="modal-products__wrapper">
+          <ul>
+            <li><span class="modal-products__quantity">40,4g</span></li>
+            <li><p class="modal-products__text">Carbs</p></li>
+          </ul>
+        </li>
+      </ul>
+      <h3 class="modal-products__undertitle">Ingredients</h3>
+      <ul class="ingredients">
+        <li class="ingredients__wrapper">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              <p class="ingredients__text">Milk</p>
+            </li>
+            <li class="ingredients__item">
+              <span class="ingredients__quantity">100ml</span>
+            </li>
+          </ul>
+        </li>
+        <li class="ingredients__wrapper">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              <p class="ingredients__text">Belgian chocolate</p>
+            </li>
+            <li class="ingredients__item">
+              <span class="ingredients__quantity">20g</span>
+            </li>
+          </ul>
+        </li>
+        <li class="ingredients__wrapper">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              <p class="ingredients__text">Cream</p>
+            </li>
+            <li class="ingredients__item">
+              <span class="ingredients__quantity">150ml</span>
+            </li>
+          </ul>
+        </li>
+        <li class="ingredients__wrapper">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              <p class="ingredients__text">Cocoa powder</p>
+            </li>
+            <li class="ingredients__item">
+              <span class="ingredients__quantity">30g</span>
+            </li>
+          </ul>
+        </li>
+        <li class="ingredients__wrapper">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              <p class="ingredients__text">Sugar</p>
+            </li>
+            <li class="ingredients__item">
+              <span class="ingredients__quantity">40g</span>
+            </li>
+          </ul>
+        </li>
+        <li class="ingredients__wrapper">
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              <p class="ingredients__text">Vanilla sugar<</p>
+            </li>
+            <li class="ingredients__item">
+              <span class="ingredients__quantity">10g</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form class="form">
+        <ul class="form__input-set">
+          <li class="form__field">
+            <input class="form__input" placeholder="Name" type="tel" />
+          </li>
+          <li class="form__field">
+            <input class="form__input" placeholder="Phone" type="text" />
+          </li>
+        </ul>
+        <textarea
+          class="form__textarea"
+          name="comment"
+          placeholder="Commment"
+        ></textarea>
+        <button class="form__btn">Submit</button>
+      </form>
+    </article>
+  </div>
+</div>
+
 <div class="backdrop is-hidden" data-backdrop-locations></div>
 <div class="backdrop is-hidden" data-backdrop-about></div>
 <div class="backdrop is-hidden" data-backdrop-franchise></div>

@@ -1,3 +1,8 @@
+/**
+  |============================
+  | base
+  |============================
+*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -8,7 +13,8 @@
   z-index: 30;
   overflow-y: scroll;
   backdrop-filter: blur(2px);
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   transition: opacity 500ms $cubic, visibility 500ms $cubic;
 
@@ -18,18 +24,27 @@
     visibility: hidden;
   }
 }
-.modal {
+.modals {
   position: relative;
   max-width: 568px;
-  padding: 28px;
+
   margin-left: auto;
   margin-right: auto;
   transform: translateY(20vh);
   border-radius: 10px;
   background-color: bgd(card-white);
+
+  @media screen and (max-width: 767px) {
+    padding: 28px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 54px;
+  }
 }
 
-.modal__btn-close {
+// btn
+.modals__btn-close {
   position: absolute;
 
   display: inline-flex;
@@ -43,6 +58,11 @@
   @media screen and (max-width: 767px) {
     top: 8px;
     right: 8px;
+
+    &--more-indent {
+      top: 28px;
+      right: 20px;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -54,9 +74,14 @@
   fill: currentColor;
 }
 
-.bay-now {
+/**
+  |============================
+  | buy now
+  |============================
+*/
+.modal-cart {
 }
-.modal__title {
+.modal-cart__title {
   text-align: center;
   line-height: 1.5;
   text-transform: uppercase;
@@ -382,4 +407,180 @@
     font-size: 14px;
     line-height: 1.214;
   }
+}
+
+/**
+  |============================
+  | products
+  |============================
+*/
+
+.modal-products__title {
+  max-width: 142px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 184px;
+
+  font-size: 20px;
+  line-height: 28px;
+  color: text(second-black);
+}
+
+.modal-products__list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    gap: 9px;
+    margin-bottom: 39px;
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 21px;
+    margin-bottom: 48px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -24px);
+    width: 132px;
+    height: 134px;
+    z-index: 1;
+
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    background-image: url(../images/modal/ingrid@1x.jpg);
+    @include retina {
+      background-image: url(../images/modal/ingrid@2x.jpg);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -17px);
+    width: 132px;
+    height: 138px;
+
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  }
+}
+.modal-products__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 2px solid #9cbe8f;
+  border-radius: 40px;
+
+  @media screen and (max-width: 767px) {
+    width: 53px;
+    height: 73px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 64px;
+    height: 90px;
+  }
+}
+
+.modal-products__quantity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-style: normal;
+  font-weight: 500;
+
+  color: text(second-black);
+
+  background: #9cbe8f;
+  border: 2px solid #9cbe8f;
+  border-radius: 50%;
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+
+  @media screen and (max-width: 767px) {
+    width: 43px;
+    height: 43px;
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    line-height: 2.8;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 53px;
+    height: 53px;
+    margin-bottom: 7px;
+
+    font-size: 12px;
+    line-height: 2.333;
+  }
+}
+
+.modal-products__text {
+  font-size: 10px;
+  line-height: 12px;
+  color: text(second-black);
+  text-align: center;
+
+  &--shift {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &--shift-to {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.modal-products__undertitle {
+  margin-bottom: 24px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: text(second-black);
+  text-align: center;
+}
+
+.ingredients {
+  margin-bottom: 48px;
+}
+
+.ingredients__wrapper {
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+.ingredients__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ingredients__item {
+}
+.ingredients__text,
+.ingredients__quantity {
+  font-size: 14px;
+  line-height: 1.785;
+
+  letter-spacing: 0.04em;
+  color: text(second-black);
 }
