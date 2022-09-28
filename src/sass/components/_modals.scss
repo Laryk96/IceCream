@@ -646,19 +646,112 @@
   }
 }
 
-// .modal-locations__video {
-//   width: 100%;
-//   height: 199px;
-//   margin-bottom: 20px;
+/**
+  |============================
+  | about
+  |============================
+*/
 
-//   border-radius: 10px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   //   overflow: hidden;
-// }
+.modal-about {
+}
 
-// .modal-locations__text {
-//   font-size: 14px;
-//   line-height: 1.428;
-//   color: text(second-black);
-// }
+.modal-about__title {
+  text-align: center;
+  color: text(second-black);
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+}
+
+.modal-about__wrapper {
+}
+
+.modal-about__video {
+  width: 100%;
+
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 767px) {
+    height: 199px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 205px;
+    margin-bottom: 32px;
+  }
+}
+
+.modal-locations__text {
+  font-size: 14px;
+  line-height: 1.428;
+  color: text(second-black);
+}
+
+.modal-about__text {
+  color: text(second-black);
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.428;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.375;
+  }
+}
+
+/**
+  |============================
+  | franchise
+  |============================
+*/
+
+.modal-franchise {
+}
+.modal-franchise__title {
+  color: text(second-black);
+  @media screen and (max-width: 767px) {
+    width: 221px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 322px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+.modal-franchise__text {
+  color: text(second-black);
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.375;
+  }
+}
